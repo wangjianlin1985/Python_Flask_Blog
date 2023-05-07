@@ -1,0 +1,73 @@
+<nav id="sidebar" class="col-lg-2 d-md-block sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold active" href="{{url_for('admin.index')}}">
+            面板 
+          </a>
+        </li>
+      </ul>
+
+      <h6 class="sidebar-heading d-flex px-3 pt-2  mt-1 mb-1 text-muted">
+        <span>文章管理</span>
+      </h6>
+      <ul class="nav flex-column ml-1">
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{ url_for('admin.write') }}">
+            撰写文章
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.articles')}}">
+            文章列表
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.categorys')}}">
+            分类列表
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.tags')}}">
+            标签管理
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.recommends')}}">
+            文章推荐
+          </a>
+        </li>
+      </ul>
+
+      <h6 class="sidebar-heading d-flex px-3 pt-2  mt-1 mb-1 text-muted ">
+        <span>设置</span>
+      </h6>
+      <ul class="nav flex-column mb-2">
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.settings')}}">
+            网站设置
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.users')}}">
+            用户管理
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.online_tools')}}">
+            在线工具
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.invit_codes')}}">
+            邀请码
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" href="{{url_for('admin.access_logs')}}">
+            抓取日志
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

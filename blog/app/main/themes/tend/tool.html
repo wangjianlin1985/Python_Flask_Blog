@@ -1,0 +1,48 @@
+{% extends 'common/base.html' %}
+{% import "macros/_patination.html" as page_macros %}
+{% block title %}在线工具-何三笔记{% endblock %}
+{% block description %}在线工具-何三笔记{% endblock %}
+{% block keywords %}在线工具-何三笔记{% endblock %}
+{% block content %}
+<!--面包导航-->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-white border-0 rounded-0 mb-2 py-2 f-15">
+        <li class="breadcrumb-item">
+            <i class="fa fa-home mr-1"></i><a href="/">首页</a>
+        </li>
+        <li class="breadcrumb-item">
+            在线工具
+        </li>
+    </ol>
+</nav>
+<!--end-->
+
+<div class="card border-0 rounded-0 mb-3" style="background: #f4f4f4;">
+    {% if tools |length > 0 %}
+    <div class="card-columns">
+        {% for t in tools %}
+        <div class="card h-100">
+            <img src="{{t.img}}" class="card-img-top" alt="{{t.title}}">
+            <div class="card-body">
+                <h5 class="card-title">{{t.title}}</h5>
+                <p class="card-text">{{t.desp}}</p>
+                <button class="btn btn-outline-primary btn-sm btn-block" onclick="openUrl('{{t.url}}')">打开</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <h1>开发中，敬请期待!!!</h1>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block js%}
+{{super()}}
+<script>
+    function openUrl(url){
+        window.location.href=url;
+    }
+</script>
+{% endblock %}
